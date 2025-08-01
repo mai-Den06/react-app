@@ -12,6 +12,10 @@ function TodoList() {
     setTask("");
   };
 
+  const handleDelete = (index: number) => {
+    setTodos(todos.filter((_, i) => i !== index));
+  };
+
   return (
     <>
       <div>
@@ -39,7 +43,12 @@ function TodoList() {
       </div>
       <div>
         {todos.map((todo, index) => (
-          <Todo key={index} task={todo} game={selectedGame} />
+          <Todo
+            key={index}
+            task={todo}
+            game={selectedGame}
+            onDelete={() => handleDelete(index)}
+          />
         ))}
       </div>
     </>
@@ -53,13 +62,13 @@ type TodoProps = {
   game?: string;
 };
 
-function Todo({ task, game }: TodoProps) {
+function Todo({ task, game, onDelete }: TodoProps & { onDelete: () => void }) {
   return (
     <div className="todo-item">
       <input type="checkbox" />
       <span>{task}</span>
-      {game && <span className="game-label">[{game}]</span>}
-      <button>削除</button>
+      {game && <span className="game-label">{game}</span>}
+      <button onClick={onDelete}>×</button>
     </div>
   );
 }
