@@ -60,14 +60,15 @@ export default TodoList;
 type TodoProps = {
   task: string;
   game?: string;
+  onDelete: () => void;
 };
 
-function Todo({ task, game, onDelete }: TodoProps & { onDelete: () => void }) {
+function Todo({ task, game, onDelete }: TodoProps) {
   return (
     <div className="todo-item">
       <input type="checkbox" />
-      <span>{task}</span>
       {game && <span className="game-label">{game}</span>}
+      <span>{task}</span>
       <button onClick={onDelete}>×</button>
     </div>
   );
