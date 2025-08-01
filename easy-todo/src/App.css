@@ -5,38 +5,88 @@
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+body {
+  font-family: "Arial", sans-serif;
+  padding: 2rem;
+  margin: 0;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+div {
+  margin-bottom: 1rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+input[type="text"] {
+  padding: 0.5rem;
+  font-size: 1rem;
+  width: 250px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 0.5rem;
 }
 
-.card {
-  padding: 2em;
+select {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  margin-right: 0.5rem;
+  border: 1px solid #ccc;
 }
 
-.read-the-docs {
-  color: #888;
+button {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem;
+  margin: 0.25rem 0;
+  background-color: #191919;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.todo-item input[type="checkbox"] {
+  margin-right: 0.75rem;
+  transform: scale(1.2);
+}
+
+.todo-item span {
+  margin-right: auto;
+  font-size: 1rem;
+}
+
+.todo-label {
+  text-align: left;
+  margin-left: 0.5rem;
+  flex-grow: 1;
+  font-size: 1rem;
+}
+
+.game-label {
+  margin-left: 1rem;
+  background-color: #2196f3;
+  color: white;
+  padding: 0.2rem 0.5rem;
+  border-radius: 3px;
+  font-size: 0.85rem;
+}
+
+.todo-item button {
+  margin-left: 1rem;
+  background-color: #191919;
+}
+
+.todo-item button:hover {
+  background-color: #333;
 }

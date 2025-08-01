@@ -68,7 +68,7 @@ function Todo({ task, game, onDelete }: TodoProps) {
     <div className="todo-item">
       <input type="checkbox" />
       {game && <span className="game-label">{game}</span>}
-      <span>{task}</span>
+      <span className="todo-label">{task}</span>
       <button onClick={onDelete}>×</button>
     </div>
   );
