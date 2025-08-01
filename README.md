@@ -11,7 +11,7 @@
      Select a framework:
      > React
      Select a variants:
-     TypeScript
+     > TypeScript
      ```
 3. パッケージのインストール
    - `npm install`
